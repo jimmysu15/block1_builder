@@ -1,0 +1,110 @@
+body{background: #eee}
+.index_block1{padding-left: 0}
+.index_block1>li{width:100%;margin-bottom:50px;box-shadow: 0 5px 10px #ddd;background: #fff;}
+.index_block1 .input-group{margin:0 0 5px}
+
+.txt_wrap{ width:100%;left:0;display:flex; align-items:center; height:400px; margin: 0 0 -400px 0; padding: 20px; }
+.txt_con{ color:#fff; padding:10px; }
+.txt_editor{ outline: 0; }
+.txt_editor h1{ margin-top: 0;display: inline-block; padding-bottom: 10px;
+	font-size: 3em; letter-spacing: 5px; font-family: Montserrat;border-bottom:3px solid #fff;  }
+.txt_btn{ border:1px solid #fff; background:none;padding: 10px 10px;border-radius: 6px; width:auto;max-width:300px;min-width:100px; outline: 0;
+	 font-size: 18px; line-height: 1.33333;color:#fff }
+.txt_btn:focus{outline: none;border-color: #fff;}
+.txt_btn:hover{background-color: #fff; border-color: #fff; color: #d92227; }
+.config_block{position: absolute;left:10px;bottom:-35px;opacity: .8;}
+.config_block:hover{opacity: 1;}
+.config_block>select{color:#555;background: rgba(255,255,255,.8);border:1px solid #fff;border-radius: 3px;font-size:10pt;padding:3px 5px;cursor:pointer}
+.config_block>select:hover{color:#000;background: rgba(255,255,255,1);}
+.img_wrap{height:400px;overflow: hidden;background: #eee}
+.img{width:100%;cursor:pointer}
+.img::after{content:'點此選擇圖片';display: block;position: absolute;font-size: 30px;top:50%;height:30px;margin:-15px 0 0 10%;font-family:'microsoft jhenghei';color:#999}
+
+.option_wrap{width:100%;padding:10px;overflow: hidden;}
+.option_wrap>.input-group{margin-right: 15px;float:right}
+.fileinput{opacity: 0;position: absolute}
+
+.seq_wrap{width:200px}
+.sequp:hover, .seqdown:hover{text-decoration: none;}
+.sequp{color:#999;}
+.seqdown{color:#aaa;}
+.link_wrap{width:500px}
+.imgpath_wrap{width:500px}
+
+.Switch {
+    position: relative;
+    display: inline-block;
+    font-size: 1.6em;
+    font-weight: bold;
+    color: #ccc;
+    text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.8);
+    height: 30px;
+    padding: 3px 6px 5px 6px;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    background: #000;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1), inset 0px 1px 3px 0px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    font-size: 16px;
+    float: left;
+}
+.Switch span {
+    display: inline-block;
+    width: 55px;
+    text-align: center;
+}
+.Switch.Off{background: #73C990}
+.Switch.On{background: #E06252}
+.Switch span.On, .Switch span.Off {color: #fff;}
+.Switch .Toggle {
+    position: absolute;
+    top: 1px;
+    width: 57px;
+    height: 25px;
+    border: 1px solid #ccc;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 4px;
+    background: #fff;
+    background: -moz-linear-gradient(top, #ececec 0%, #ffffff 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #ececec), color-stop(100%, #ffffff));
+    background: -webkit-linear-gradient(top, #ececec 0%, #ffffff 100%);
+    background: -o-linear-gradient(top, #ececec 0%, #ffffff 100%);
+    background: -ms-linear-gradient(top, #ececec 0%, #ffffff 100%);
+    background: linear-gradient(top, #ececec 0%, #ffffff 100%);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.5);
+    z-index: 999;
+    -webkit-transition: all 0.15s ease-in-out;
+    -moz-transition: all 0.15s ease-in-out;
+    -o-transition: all 0.15s ease-in-out;
+    -ms-transition: all 0.15s ease-in-out;
+}
+.Switch.On .Toggle {
+    left: 2%;
+}
+.Switch.Off .Toggle {
+    left: 54%;
+}
+
+
+/* Round Switch */
+
+.Switch.Round {
+    padding: 0px 20px;
+    border-radius: 40px;
+}
+body.IE7 .Switch.Round {
+    width: 1px;
+}
+.Switch.Round .Toggle {
+    border-radius: 40px;
+    width: 14px;
+    height: 14px;
+}
+.Switch.Round.Off .Toggle {
+    left: 3%;
+    background: #33d2da;
+}
+.Switch.Round.On .Toggle {
+    left: 58%;
+}

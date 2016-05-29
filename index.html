@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>廣告設定器</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+<link rel="stylesheet" href="css/spectrum.css">
+<link rel="stylesheet" type="text/css" media="all" href="css/base.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+<script src="js/spectrum.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="http://cdn.ckeditor.com/4.5.9/full-all/ckeditor.js"></script>
+
+</head>
+<body>
+	<div class="container">
+		<div class="page-header clearfix">
+			<h1 class="pull-left" style="margin-top:0">首頁廣告組管理器</h1>
+			<div class="pull-right">
+				<a href="javascript:void(0)" class="btn btn-primary btn_create_newblock"><span class="glyphicon glyphicon-plus"></span> 增加廣告組</a>
+				<a href="javascript:void(0)" class="btn btn-success btn_save"><span class="glyphicon glyphicon-ok"></span> 儲存變更</a>
+			</div>
+		</div>
+	</div>
+
+
+<div class="">
+	<ul class="index_block1">
+<!-- 1  -->
+<li>
+		<div class="row txt_wrap">
+			<div class="col-md-5 txt_con" style="background:rgba(0,0,0,.6)" data-offset="" data-bg="rgba(0,0,0,.6)" data-width="col-md-5">
+				<div class="config_block">
+					<select class="col_width">
+						<option value="col-md-3">窄</option>
+						<option value="col-md-4">中</option>
+						<option value="col-md-5" selected>寬</option>
+					</select>
+					<select class="col_offset">
+						<option value="" selected>靠左邊</option>
+						<option value="col-md-offset-6">稍微靠右</option>
+						<option value="col-md-offset-8">最靠右</option>
+					</select>
+					<input type="text" class="form-control bgcolor" style="display: none;">
+				</div>
+				<div class="inner txt_editor" contenteditable="true">
+					<h1>夜晚的守護者</h1>
+					<p>Because he's not our hero,he’s a silent guardian,a watchful protector … a dark knight.<br>因為他不是個英雄。他是沉默的守護天使、警戒的保護者...他是黑暗騎士。</p>
+				</div>
+				<input type="text" class="form-control txt_btn" value="申請保全系統" placeholder="按鈕文字" title="ex.前往購買 (10字以內)" data-toggle="tooltip" data-placement="top" >
+			</div>
+		</div>
+		<div class="img_wrap">
+			<img src="images/city-1281625_1920.jpg" class="img">
+		</div>
+
+	<div class="option_wrap">
+		<div class="input-group seq_wrap">
+			<div class="input-group-addon">第<span class="seqnum"></span>張，順序</div>
+			<div class="input-group-btn"><a href="javascript:void(0)" class="btn btn-default sequp" onclick="pdsequp($(this));"><span class="glyphicon glyphicon-arrow-up"></span> 往上</a><a href="javascript:void(0)" class="btn btn-default seqdown" onclick="pdseqdown($(this));"><span class="glyphicon glyphicon-arrow-down"></span> 往下</a></div>
+		</div>
+		<div class="switch_wrap">
+			<input type="checkbox" checked>
+			<div class="Switch">
+				<div class="Toggle"></div>
+				<span class="On">已啟用</span> <span class="Off">已停用</span>
+			</div>
+		</div>
+		<div class="input-group imgpath_wrap">
+			<input type="file" class="fileinput"/>
+			<span class="input-group-addon event_item"><span class="glyphicon glyphicon-picture"></span> 圖片路徑:</span>
+			<input type="text" class="form-control imgpath" placeholder="點此選擇背景圖片">
+			<div class="input-group-btn">
+					<a href="#" class="btn btn-primary choosefile"><span class="glyphicon glyphicon-folder-open"></span> 瀏覽檔案</a>
+					<a href="javascript:void(0)" class="btn btn-warning clearfile"><span class="glyphicon glyphicon-remove"></span> 清除</a>
+			</div>
+		</div>
+		<div class="input-group link_wrap">
+			<span class="input-group-addon event_item"><span class="glyphicon glyphicon-link"></span> 點擊後前往連結:</span>
+			<input type="text" class="form-control linkurl">
+		</div>
+	 </div>
+
+	</li>
+<!-- 2 -->
+	<li>
+			<div class="row txt_wrap">
+				<div class="col-md-3 col-md-offset-8 txt_con" style="background:rgba(0,0,0,.6)" data-offset="col-md-offset-8" data-bg="rgba(0,0,0,.6)" data-width="col-md-3">
+					<div class="config_block">
+						<select class="col_width">
+			        <option value="col-md-3" selected>窄</option>
+			        <option value="col-md-4">中</option>
+			        <option value="col-md-5">寬</option>
+			      </select>
+						<select class="col_offset">
+			        <option value="">靠左邊</option>
+			        <option value="col-md-offset-6">稍微靠右</option>
+			        <option value="col-md-offset-8" selected>最靠右</option>
+			      </select>
+						<input type="text" class="form-control bgcolor" style="display: none;">
+					</div>
+					<div class="inner txt_editor" contenteditable="true">
+						<h1>按此輸入標題</h1>
+						<p>按此輸入文字</p>
+					</div>
+					<input type="text" class="form-control txt_btn" placeholder="按鈕文字" title="ex.前往購買 (10字以內)" data-toggle="tooltip" data-placement="top" >
+				</div>
+	  	</div>
+			<div class="img_wrap">
+				<img src="images/urban-438393_1920.jpg" class="img">
+			</div>
+
+	  <div class="option_wrap">
+			<div class="input-group seq_wrap">
+				<div class="input-group-addon">第<span class="seqnum"></span>張，順序</div>
+				<div class="input-group-btn"><a href="javascript:void(0)" class="btn btn-default sequp" onclick="pdsequp($(this));"><span class="glyphicon glyphicon-arrow-up"></span> 往上</a><a href="javascript:void(0)" class="btn btn-default seqdown" onclick="pdseqdown($(this));"><span class="glyphicon glyphicon-arrow-down"></span> 往下</a></div>
+			</div>
+			<div class="switch_wrap">
+				<input type="checkbox" checked>
+				<div class="Switch">
+	        <div class="Toggle"></div>
+	        <span class="On">已啟用</span> <span class="Off">已停用</span>
+	      </div>
+			</div>
+	    <div class="input-group imgpath_wrap">
+				<input type="file" class="fileinput"/>
+	      <span class="input-group-addon event_item"><span class="glyphicon glyphicon-picture"></span> 圖片路徑:</span>
+	      <input type="text" class="form-control imgpath" placeholder="點此選擇背景圖片">
+	      <div class="input-group-btn">
+						<a href="#" class="btn btn-primary choosefile"><span class="glyphicon glyphicon-folder-open"></span> 瀏覽檔案</a>
+						<a href="javascript:void(0)" class="btn btn-warning clearfile"><span class="glyphicon glyphicon-remove"></span> 清除</a>
+				</div>
+	    </div>
+	    <div class="input-group link_wrap">
+	      <span class="input-group-addon event_item"><span class="glyphicon glyphicon-link"></span> 點擊後前往連結:</span>
+	      <input type="text" class="form-control linkurl">
+	    </div>
+	   </div>
+
+	  </li>
+<!-- 3 -->
+			<li>
+					<div class="row txt_wrap">
+						<div class="col-md-4 col-md-offset-6 txt_con" style="background:rgba(0,0,0,.6)" data-offset="col-md-offset-6" data-bg="rgba(0,0,0,.6)" data-width="col-md-4">
+							<div class="config_block">
+								<select class="col_width">
+									<option value="col-md-3">窄</option>
+									<option value="col-md-4" selected>中</option>
+									<option value="col-md-5">寬</option>
+								</select>
+								<select class="col_offset">
+									<option value="">靠左邊</option>
+									<option value="col-md-offset-6" selected>稍微靠右</option>
+									<option value="col-md-offset-8">最靠右</option>
+								</select>
+								<input type="text" class="form-control bgcolor" style="display: none;">
+							</div>
+							<div class="inner txt_editor" contenteditable="true">
+								<h1>都市的英雄</h1>
+								<p>The night is darkest just before the dawn. And I promise you, the dawn is coming. 黎明前的夜晚是最黑暗的，但我承諾各位，黎明就要來到。</p>
+							</div>
+							<input type="text" class="form-control txt_btn" value="申請保全系統" placeholder="按鈕文字" title="ex.前往購買 (10字以內)" data-toggle="tooltip" data-placement="top" >
+						</div>
+					</div>
+					<div class="img_wrap">
+						<img src="images/taxi-cab-381233_1920.jpg" class="img">
+					</div>
+
+				<div class="option_wrap">
+					<div class="input-group seq_wrap">
+						<div class="input-group-addon">第<span class="seqnum"></span>張，順序</div>
+						<div class="input-group-btn"><a href="javascript:void(0)" class="btn btn-default sequp" onclick="pdsequp($(this));"><span class="glyphicon glyphicon-arrow-up"></span> 往上</a><a href="javascript:void(0)" class="btn btn-default seqdown" onclick="pdseqdown($(this));"><span class="glyphicon glyphicon-arrow-down"></span> 往下</a></div>
+					</div>
+					<div class="switch_wrap">
+						<input type="checkbox" checked>
+						<div class="Switch">
+							<div class="Toggle"></div>
+							<span class="On">已啟用</span> <span class="Off">已停用</span>
+						</div>
+					</div>
+					<div class="input-group imgpath_wrap">
+						<input type="file" class="fileinput"/>
+						<span class="input-group-addon event_item"><span class="glyphicon glyphicon-picture"></span> 圖片路徑:</span>
+						<input type="text" class="form-control imgpath" placeholder="點此選擇背景圖片">
+						<div class="input-group-btn">
+								<a href="#" class="btn btn-primary choosefile"><span class="glyphicon glyphicon-folder-open"></span> 瀏覽檔案</a>
+								<a href="javascript:void(0)" class="btn btn-warning clearfile"><span class="glyphicon glyphicon-remove"></span> 清除</a>
+						</div>
+					</div>
+					<div class="input-group link_wrap">
+						<span class="input-group-addon event_item"><span class="glyphicon glyphicon-link"></span> 點擊後前往連結:</span>
+						<input type="text" class="form-control linkurl">
+					</div>
+				 </div>
+
+				</li>
+
+	</ul>
+</div>
+
+
+
+<div class="modal fade" tabindex="-1" role="dialog" id="htmlcodemodal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">產生 html</h4>
+      </div>
+      <div class="modal-body">
+        <textarea id="htmlcode_result"></textarea>
+				<div id="img_result"></div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">關閉</button>
+        <button type="button" class="btn btn-primary">返回修改</button>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<script>
+	$(window).bind('beforeunload', function () {
+      if ($('#startedit').val() == "1") return "是否確定關閉網頁?";
+  });
+
+	$(function(){
+		colopicker();
+
+		$('[data-toggle="tooltip"]').tooltip();
+
+		$('.index_block1').on('click', '.choosefile', function(){
+			$(this).parent().parent().find('.fileinput').click();
+		})
+		$('.index_block1').on('click', '.imgpath', function(){
+			$(this).parent().find('.fileinput').click();
+		})
+		$('.index_block1').on('click', '.img_wrap', function(){
+			$(this).next().find('.fileinput').click();
+		})
+		$('.index_block1').on('click', '.clearfile', function(){
+			$(this).parent().parent().find('.fileinput').val('');
+			$(this).parent().parent().find('.imgpath').val('')
+		})
+
+		$(".fileinput").change(function () {
+	    var file=$(this).val().replace(/C:\\fakepath\\/ig,'');
+	    $(this).parent().find('.imgpath').val(file);
+		});
+
+		$('.index_block1 li').each(function(){
+			  var thisindex = $(this).index()+1;
+				$(this).find('.seqnum').text(' '+thisindex+' ');
+		})
+
+		$('.btn_create_newblock').click(function(){
+			var html = "	<li> <div class='row txt_wrap'> <div class='col-md-3 col-md-offset-8 txt_con' style='background:rgba(0,0,0,.6)' data-offset='col-md-offset-8' data-bg='rgba(0,0,0,.6)' data-width='col-md-3'> <div class='config_block'> <select class='col_width'> <option value='col-md-3' selected>窄</option> <option value='col-md-4'>中</option> <option value='col-md-5'>寬</option> </select> <select class='col_offset'> <option value=''>靠左邊</option> <option value='col-md-offset-6'>稍微靠右</option> <option value='col-md-offset-8' selected>最靠右</option> </select> <input type='text' class='form-control bgcolor' style='display: none;'> </div> <div class='inner txt_editor' contenteditable='true'> <h1>按此輸入標題</h1> <p>按此輸入文字</p> </div> <input type='text' class='form-control txt_btn' placeholder='按鈕文字' title='ex.前往購買 (10字以內)' data-toggle='tooltip' data-placement='top' > </div> </div> <div class='img_wrap'> <img src='' class='img'> </div> <div class='option_wrap'> <div class='input-group seq_wrap'> <div class='input-group-addon'>順序</div> <div class='input-group-btn'><a href='javascript:void(0)' class='btn btn-default sequp' onclick='pdsequp($(this));'><span class='glyphicon glyphicon-arrow-up'></span> 往上</a><a href='javascript:void(0)' class='btn btn-default seqdown' onclick='pdseqdown($(this));'><span class='glyphicon glyphicon-arrow-down'></span> 往下</a></div> </div> <div class='Switch Off'> <div class='Toggle'></div> <span class='On'>已啟用</span> <span class='Off'>已停用</span> </div> <div class='input-group imgpath_wrap'> <input type='file' class='fileinput'/> <span class='input-group-addon event_item'><span class='glyphicon glyphicon-picture'></span> 圖片路徑:</span> <input type='text' class='form-control imgpath' placeholder='點此選擇背景圖片'> <div class='input-group-btn'> <a href='#' class='btn btn-primary choosefile'><span class='glyphicon glyphicon-folder-open'></span> 瀏覽檔案</a> <a href='#' class='btn btn-warning clearfile'><span class='glyphicon glyphicon-remove'></span> 清除</a> </div> </div> <div class='input-group link_wrap'> <span class='input-group-addon event_item'><span class='glyphicon glyphicon-link'></span> 點擊後前往連結:</span> <input type='text' class='form-control linkurl'> </div> </div> </li>"
+			$('.index_block1').prepend(html);
+			colopicker();
+		});
+
+		function colopicker(){
+			$(".bgcolor").spectrum({
+			    color: "rgba(0,0,0,.6)",
+					showAlpha: true,
+					preferredFormat: "rgb",
+					allowEmpty:true,
+	    		chooseText: "選好了",
+	    		cancelText: "取消",
+					change: function(color) {
+					 	$(this).parent().parent().css('background',$(this).val());
+			 		}
+			});
+		};
+
+		// switch http://codepen.io/DC/pen/JqrIH
+		$('.index_block1').on('click', '.Switch', function() {
+            if ($(this).hasClass('On')){
+                $(this).parent().find('input:checkbox').attr('checked', true);
+                $(this).removeClass('On').addClass('Off');
+            } else {
+                $(this).parent().find('input:checkbox').attr('checked', false);
+                $(this).removeClass('Off').addClass('On');
+            }
+    });
+    $('.Switch').each(function() {
+            if ($(this).parent().find('input:checkbox').length){
+                if (!$(this).parent().find('input:checkbox').hasClass("show")){
+                    $(this).parent().find('input:checkbox').hide(); }
+                if ($(this).parent().find('input:checkbox').is(':checked')){
+                    $(this).removeClass('On').addClass('Off');
+                } else {
+                    $(this).removeClass('Off').addClass('On');
+                }
+            }
+			});
+			var editarea = $('.txt_editor');
+			for ( var i = 0; i < editarea.length; ++i ) {
+			    CKEDITOR.inline( editarea[ i ], {
+						extraPlugins: '',
+						format_tags : 'p;h1',
+						fontSize_sizes : '10pt/10pt;13/13px;16/16px;18/18px;20/20px;22/22px;24/24px;36/36px;48/48px;',
+						allowedContent : true,
+						removeButtons : 'About,Maximize,ShowBlocks,Styles,Flash,Table,HorizontalRule,Smiley,SpecialChar,PageBreak,Iframe,Anchor,BidiLtr,BidiRtl,Language,Blockquote,CreateDiv,BulletedList,NumberedList,Subscript,Superscript,Form,Checkbox,Radio,TextField,Textarea,Select,Button,ImageButton,HiddenField,Scayt,SelectAll,Save,NewPage,Preview,Print,Templates,Cut,Undo,Redo,Copy,Paste,PasteText,PasteFromWord,Find,Replace',
+						filebrowserImageBrowseUrl : '/Plugins/ckfinder/ckfinder.html?Type=Images',
+						filebrowserUploadUrl : '/Plugins/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Files',
+						filebrowserImageUploadUrl : '/Plugins/ckfinder/core/connector/aspx/connector.aspx?command=QuickUpload&type=Images',
+					 } );
+			}
+			$('.txt_btn').each(autowidth_input);
+	});
+
+	function autowidth_input() {
+		$(this).attr('size', $(this).val().length+3);
+	}
+	// 按鈕欄位自動寬度
+	$('.txt_btn').keydown(autowidth_input).each(autowidth_input);
+
+	// 變換蘭寬
+	$('.col_width').on('change', function () {
+    var valueSelected = $(this).val();
+		 $(this).parent().parent().parent().find('.txt_con').removeClass('col-md-3 col-md-4 col-md-4');
+ 	   $(this).parent().parent().parent().find('.txt_con').addClass(valueSelected).data('width',valueSelected);
+	});
+
+	// 變換位置
+	$('.col_offset').on('change', function () {
+    var valueSelected = $(this).val();
+		 $(this).parent().parent().parent().find('.txt_con').removeClass('col-md-offset-6 col-md-offset-8');
+ 	   $(this).parent().parent().parent().find('.txt_con').addClass(valueSelected).data('offset',valueSelected);
+	});
+
+
+	function addZero(i) {if (i < 10) {i = "0" + i;} return i;}
+	var currentdate = new Date();
+	var datetime = currentdate.getFullYear() + "" + (currentdate.getMonth()+1) + "" + currentdate.getDate();
+
+	//排序(向上)
+	function pdsequp(obj) {
+	    var index = obj.index('.sequp');
+	    if (index == "0") { alert('已經是第一張了。'); }
+	    else {
+	        var thisHtml = obj.parent().parent().parent().parent().html();
+	        var preHtml = $('.sequp').eq(index - 1).parent().parent().parent().parent().html();
+	        obj.parent().parent().parent().parent().html(preHtml);
+	        $('.sequp').eq(index - 1).parent().parent().parent().parent().html(thisHtml);
+					$('.index_block1 li').each(function(){
+							var thisindex = $(this).index()+1;
+							$(this).find('.seqnum').text(' '+thisindex+' ');
+					})
+	    }
+	}
+	//排序(向下)
+	function pdseqdown(obj) {
+	    var index = obj.index('.seqdown'), count = $('.seqdown').length - 1;
+	    if (index == count) { alert('已經是最後一張了。'); }
+	    else {
+	        var thisHtml = obj.parent().parent().parent().parent().html();
+	        var nextHtml = $('.seqdown').eq(index + 1).parent().parent().parent().parent().html();
+	        obj.parent().parent().parent().parent().html(nextHtml);
+	        $('.seqdown').eq(index + 1).parent().parent().parent().parent().html(thisHtml);
+					$('.index_block1 li').each(function(){
+							var thisindex = $(this).index()+1;
+							$(this).find('.seqnum').text(' '+thisindex+' ');
+					})
+	    }
+	}
+
+
+
+
+
+</script>
+<!--
+	https://www.sitepoint.com/html5-javascript-open-dropped-files/
+-->
+</body>
+</html>
+</div>
